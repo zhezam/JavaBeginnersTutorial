@@ -9,7 +9,7 @@ import java.util.ArrayList;
 /**
  * Created by Евгения on 01.11.2017.
  */
-public class ArrayExample {
+public final class ArrayExample {
 
     public static ArrayList<Language> getAvailableLanguagesList() {
 

@@ -1,6 +1,5 @@
 package zhezam.javabeginner.languages.comparators;
 
-import zhezam.javabeginner.languages.Language;
 import zhezam.javabeginner.languages.SignsSystem;
 
 import java.util.Comparator;

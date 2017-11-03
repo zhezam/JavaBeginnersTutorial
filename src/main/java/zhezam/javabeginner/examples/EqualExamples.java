@@ -8,9 +8,10 @@ import zhezam.javabeginner.languages.enums.ELanguage;
 /**
  * Created by Евгения on 02.11.2017.
  */
-public class EqualExamples {
+public final class EqualExamples {
 
     public static void testEqualExamples() {
+
         Language english1 = new Language(ELanguage.ENGLISH);
         Language english2 = new Language(ELanguage.ENGLISH);
 

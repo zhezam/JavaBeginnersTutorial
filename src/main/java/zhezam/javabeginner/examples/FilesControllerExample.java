@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Created by Евгения on 02.11.2017.
  */
-public class FilesControllerExample {
+public final class FilesControllerExample {
 
     public static String filesPath = "src\\main\\resources\\";
     public static String extension = "txt";

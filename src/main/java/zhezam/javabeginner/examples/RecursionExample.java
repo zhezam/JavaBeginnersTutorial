@@ -3,7 +3,7 @@ package zhezam.javabeginner.examples;
 /**
  * Created by Евгения on 02.11.2017.
  */
-public class RecursionExample {
+public final class RecursionExample {
 
     public static void run() {
 

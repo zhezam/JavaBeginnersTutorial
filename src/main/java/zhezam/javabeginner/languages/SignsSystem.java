@@ -39,23 +39,21 @@ public abstract class SignsSystem implements IInfo {
         return name;
     }
 
+    public abstract String getHi();
+    public abstract String getHello();
+
     @Override
-    public boolean equals(Object obj) {
-        SignsSystem signsSystem = (SignsSystem) obj;
-        if (signsSystem != null) {
-            if (name.equals(signsSystem.name)) {
-                return true;
-            }
-        }
-        return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        SignsSystem that = (SignsSystem) o;
+
+        return name.equals(that.name);
     }
 
     @Override
     public int hashCode() {
-        //TODO
-        return super.hashCode();
+        return name.hashCode();
     }
-
-    public abstract String getHi();
-    public abstract String getHello();
 }

@@ -10,7 +10,7 @@ import java.util.Scanner;
 /**
  * Created by Евгения on 03.11.2017.
  */
-public class LanguagesInOutExample {
+public final class LanguagesInOutExample {
 
     public static void run() {
 

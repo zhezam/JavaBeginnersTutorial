@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Created by Евгения on 02.11.2017.
  */
-public class FilesControllerExample {
+public final class FilesControllerExample {
 
     public static String filesPath = "src\\main\\resources\\";
     public static String extension = "txt";
@@ -38,12 +38,7 @@ public class FilesControllerExample {
             System.out.println("Can't read file " + e.toString());
         }
         finally {
-            try {
-                scanner.close();
-            }
-            catch (NullPointerException e) {
-                System.out.println("Scanner is null: " + e.toString());
-            }
+            scanner.close();
         }
 
         return resultArray;

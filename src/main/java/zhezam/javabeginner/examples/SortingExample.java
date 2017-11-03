@@ -10,7 +10,7 @@ import java.util.Collections;
 /**
  * Created by Евгения on 03.11.2017.
  */
-public class SortingExample {
+public final class SortingExample {
 
     public static void run() {
         ArrayList<Language> languages = ArrayExample.getAvailableLanguagesList();
@@ -19,12 +19,18 @@ public class SortingExample {
         ArrayExample.printSignsSystemsList(languages);
 
 
-        System.out.println("Languages Sorted by names list: ");
+        System.out.println("Languages Sorted with NamesComparator list: ");
         Collections.sort(languages, new NamesComparator());
         ArrayExample.printSignsSystemsList(languages);
 
 
-        System.out.println("Languages Sorted by speakers number list: ");
+        System.out.println("Languages Sorted with SpeakersComparator list: ");
         Collections.sort(languages, new SpeakersComparator());
-        ArrayExample.printSignsSystemsList(languages);}
+        ArrayExample.printSignsSystemsList(languages);
+
+
+        System.out.println("Languages Sorted on name in comparable list: ");
+        Collections.sort(languages, new SpeakersComparator());
+        ArrayExample.printSignsSystemsList(languages);
+    }
 }

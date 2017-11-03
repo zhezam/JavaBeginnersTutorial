@@ -35,4 +35,22 @@ public class Dialect extends SignsSystem {
     public String getHello() {
         return  language.getHello();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        Dialect dialect = (Dialect) o;
+
+        return language != null ? language.equals(dialect.language) : dialect.language == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = super.hashCode();
+        result = 31 * result + (language != null ? language.hashCode() : 0);
+        return result;
+    }
 }

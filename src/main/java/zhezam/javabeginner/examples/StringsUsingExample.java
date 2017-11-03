@@ -1,9 +1,9 @@
-package zhezam.javabeginner;
+package zhezam.javabeginner.examples;
 
 /**
  * Created by Евгения on 02.11.2017.
  */
-public class StringsHelper {
+public class StringsUsingExample {
 
     public static String revertString(String input) {
 

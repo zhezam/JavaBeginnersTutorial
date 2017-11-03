@@ -1,4 +1,4 @@
-package zhezam.javabeginner;
+package zhezam.javabeginner.examples;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 /**
  * Created by Евгения on 02.11.2017.
  */
-public class FilesControllerClass {
+public class FilesControllerExample {
 
     public static String filesPath = "src\\main\\resources\\";
     public static String extension = "txt";

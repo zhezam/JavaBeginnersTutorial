@@ -2,7 +2,7 @@ package zhezam.javabeginner.examples;
 
 import zhezam.javabeginner.languages.Language;
 import zhezam.javabeginner.languages.LanguagesList;
-import zhezam.javabeginner.languages.enums.ELanguage;
+import zhezam.javabeginner.languages.enums.LanguageType;
 
 import java.util.Iterator;
 
@@ -13,15 +13,15 @@ public final class IteratorExample {
 
     public static void run() {
         LanguagesList list = new LanguagesList();
+
         print(list);
 
-        remove(list, ELanguage.GREEK);
+        remove(list, LanguageType.GREEK);
 
         print(list);
     }
 
-    private static void remove(LanguagesList list, ELanguage type) {
-
+    private static void remove(LanguagesList list, LanguageType type) {
         Iterator<Language> iterator = list.iterator();
         while (iterator.hasNext()) {
             Language language = iterator.next();
@@ -32,7 +32,6 @@ public final class IteratorExample {
     }
 
     private static void print(LanguagesList list) {
-
         StringBuilder outputString = new StringBuilder();
 
         for (Language language: list) {

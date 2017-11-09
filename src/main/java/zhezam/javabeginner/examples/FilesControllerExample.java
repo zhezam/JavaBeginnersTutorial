@@ -94,13 +94,11 @@ public final class FilesControllerExample {
      * 2
      */
     public static ArrayList<String> readFile (String fileName) {
-
         ArrayList<String> resultArray = new ArrayList<>();
 
         File file = new File(filesPath + fileName + "." + extension);
 
         try (BufferedReader buffer = new BufferedReader(new FileReader(file))) {
-
             String line;
             while ((line = buffer.readLine()) != null) {
                 resultArray.add(line);
@@ -122,7 +120,6 @@ public final class FilesControllerExample {
      * java 7
      */
     public static void appendFile (String fileName, String expression) {
-
         File file = new File(filesPath + fileName + "." + extension);
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(file, true))) {

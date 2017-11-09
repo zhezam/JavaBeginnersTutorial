@@ -1,8 +1,8 @@
 package zhezam.javabeginner.languages;
 
 import zhezam.javabeginner.examples.FilesControllerExample;
-import zhezam.javabeginner.languages.enums.EEnglishDialect;
-import zhezam.javabeginner.languages.enums.ELanguage;
+import zhezam.javabeginner.languages.enums.EnglishDialectType;
+import zhezam.javabeginner.languages.enums.LanguageType;
 
 import java.util.ArrayList;
 
@@ -11,27 +11,23 @@ import java.util.ArrayList;
  */
 public class Language extends SignsSystem implements Comparable<Language> {
 
-    protected ELanguage type;
+    protected LanguageType type;
 
     private Dialect[] dialects;
 
     private ArrayList<String> expressions;
 
+    public Language(LanguageType languageType) {
+        super(languageType.getName());
 
-    public Language(ELanguage eLanguage) {
-
-        super(eLanguage.getName());
-
-        this.type = eLanguage;
+        this.type = languageType;
 
         getDialects();
     }
 
-
-    public ELanguage getType() {
+    public LanguageType getType() {
         return type;
     }
-
 
     public Dialect[] getDialects() {
         if (dialects == null) {
@@ -45,10 +41,6 @@ public class Language extends SignsSystem implements Comparable<Language> {
             this.expressions = FilesControllerExample.readFile(name);
         }
         return expressions;
-    }
-
-    public void addExpression(String expression) {
-        FilesControllerExample.appendFile(name, expression);
     }
 
     @Override
@@ -77,19 +69,21 @@ public class Language extends SignsSystem implements Comparable<Language> {
         return getExpressions().get(1);
     }
 
-
     public static Dialect[] getDialects(Language language) {
-
         switch (language.type) {
             case ENGLISH:
-                Dialect[] dialects = new Dialect[EEnglishDialect.values().length];
-                for (int i = 0; i < EEnglishDialect.values().length; i++) {
-                    dialects[i] = new Dialect(EEnglishDialect.values()[i].getName(), language);
+                Dialect[] dialects = new Dialect[EnglishDialectType.values().length];
+                for (int i = 0; i < EnglishDialectType.values().length; i++) {
+                    dialects[i] = new Dialect(EnglishDialectType.values()[i].getName(), language);
                 }
                 return dialects;
             default:
                 return new Dialect[0];
         }
+    }
+
+    public void addExpression(String expression) {
+        FilesControllerExample.appendFile(name, expression);
     }
 
     @Override
@@ -99,9 +93,17 @@ public class Language extends SignsSystem implements Comparable<Language> {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        if (!super.equals(o)) return false;
+        if (this == o) {
+            return true;
+        }
+
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+
+        if (!super.equals(o)) {
+            return false;
+        }
 
         Language language = (Language) o;
 

@@ -6,7 +6,6 @@ package zhezam.javabeginner.examples;
 public final class RecursionExample {
 
     public static void run() {
-
         fibonacciNumbers(0, 1, 100);
     }
 

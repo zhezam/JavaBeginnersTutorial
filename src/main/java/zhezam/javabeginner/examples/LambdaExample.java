@@ -5,27 +5,25 @@ import zhezam.javabeginner.languages.interfaces.ISpeaker;
 /**
  * Created by Евгения on 03.11.2017.
  */
+
+class Seminar {
+    public void speak(ISpeaker speaker) {
+        System.out.print(speaker.speech(10));
+    }
+}
+
+class Lecture {
+    public void speak(ISpeaker speaker) {
+        System.out.print(speaker.speech(45));
+    }
+}
+
 public final class LambdaExample {
-
-    private static class Seminar {
-
-        public void speak(ISpeaker speaker) {
-            System.out.print(speaker.speech(10));
-        }
-    }
-
-    private static class Lecture {
-
-        public void speak(ISpeaker speaker) {
-            System.out.print(speaker.speech(45));
-        }
-    }
 
     public static void run() {
         Seminar seminar = new Seminar();
 
         seminar.speak(new ISpeaker() {
-
             @Override
             public String speech(int minutes) {
                 return "This is my speech...for " + minutes + " minutes. \n";
@@ -43,7 +41,7 @@ public final class LambdaExample {
         });
 
         Lecture lecture = new Lecture();
-        lecture.speak((int minutes) -> {
+        lecture.speak(minutes -> {
             if (minutes < 30) {
                 return "something easy \n";
             }

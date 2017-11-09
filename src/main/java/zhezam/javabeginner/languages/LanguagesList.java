@@ -1,6 +1,6 @@
 package zhezam.javabeginner.languages;
 
-import zhezam.javabeginner.languages.enums.ELanguage;
+import zhezam.javabeginner.languages.enums.LanguageType;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -14,10 +14,10 @@ public class LanguagesList implements Iterable<Language>{
 
     public LanguagesList() {
 
-        languages.add(new Language(ELanguage.GREEK));
-        languages.add(new Language(ELanguage.ENGLISH));
-        languages.add(new Language(ELanguage.GERMAN));
-        languages.add(new Language(ELanguage.RUSSIAN));
+        languages.add(new Language(LanguageType.GREEK));
+        languages.add(new Language(LanguageType.ENGLISH));
+        languages.add(new Language(LanguageType.GERMAN));
+        languages.add(new Language(LanguageType.RUSSIAN));
     }
 
 

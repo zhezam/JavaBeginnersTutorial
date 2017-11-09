@@ -1,8 +1,8 @@
 package zhezam.javabeginner.examples;
 
 import zhezam.javabeginner.languages.SignsSystem;
-import zhezam.javabeginner.languages.enums.ELanguage;
 import zhezam.javabeginner.languages.Language;
+import zhezam.javabeginner.languages.enums.LanguageType;
 
 import java.util.ArrayList;
 
@@ -14,9 +14,9 @@ public final class ArrayExample {
     public static ArrayList<Language> getAvailableLanguagesList() {
 
         ArrayList<Language> languages = new ArrayList<>();
-        languages.add(new Language(ELanguage.ENGLISH));
-        languages.add(new Language(ELanguage.RUSSIAN));
-        languages.add(new Language(ELanguage.GERMAN));
+        languages.add(new Language(LanguageType.ENGLISH));
+        languages.add(new Language(LanguageType.RUSSIAN));
+        languages.add(new Language(LanguageType.GERMAN));
         return languages;
     }
 

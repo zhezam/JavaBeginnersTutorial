@@ -11,12 +11,7 @@ public class MainClass {
 
     public static void main(String[] args) throws IOException {
         //ExtendedThreadExample.run();
-        ///RunnableThreadExample.run();
-
-
-        int a = 7;
-        int b  = 4;
-        System.out.println(5^6&3);
+        RunnableThreadExample.run();
     }
 }
 
